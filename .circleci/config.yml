@@ -39,3 +39,11 @@ jobs:
       - store_artifacts:
           path: test-reports/
           destination: python_app
+          
+          
+workflows:
+  version: 2
+  execute_bulk:
+    jobs:
+      - build_deploy
+      - build
